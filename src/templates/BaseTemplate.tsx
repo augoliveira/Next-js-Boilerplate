@@ -13,7 +13,7 @@ export const BaseTemplate = (props: {
       <div className="mx-auto max-w-screen-md">
         <header className="border-b border-gray-300">
           <div className="pb-8 pt-16">
-            <h1 className="text-3xl font-bold text-gray-900">
+            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 xl:text-5xl/[3.5rem]">
               {AppConfig.name}
             </h1>
             <h2 className="text-xl">{t('description')}</h2>
@@ -42,7 +42,7 @@ export const BaseTemplate = (props: {
             author: () => (
               <a
                 href="https://creativedesignsguru.com"
-                className="text-blue-700 hover:border-b-2 hover:border-blue-700"
+                className="text-base/7 font-medium text-gray-900 hover:border-b-2 hover:border-blue-700"
               >
                 CreativeDesignsGuru
               </a>
