@@ -1,4 +1,5 @@
 /* eslint-disable react/no-useless-fragment */
+import { Sponsors } from '@/components/Sponsors';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IIndexProps = {
@@ -26,6 +27,7 @@ export default async function Index(props: IIndexProps) {
     <>
       <div>
         <h1>Olá</h1>
+        <Sponsors />
       </div>
     </>
   );
