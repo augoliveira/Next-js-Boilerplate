@@ -16,7 +16,6 @@ export const BaseTemplate = (props: {
             <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 xl:text-5xl/[3.5rem]">
               {AppConfig.name}
             </h1>
-            <h2 className="mt-6 text-lg/8 text-gray-600">{t('description')}</h2>
           </div>
 
           <div className="flex justify-between">
