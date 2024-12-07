@@ -31,6 +31,7 @@
     "@clerk/localizations": "^3.8.0",
     "@clerk/nextjs": "^6.8.0",
     "@electric-sql/pglite": "^0.2.14",
+    "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^3.9.1",
     "@logtail/pino": "^0.5.2",
     "@material-tailwind/react": "^2.1.10",
