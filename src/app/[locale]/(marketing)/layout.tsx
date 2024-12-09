@@ -1,4 +1,4 @@
-import { DemoBanner } from '@/components/DemoBanner';
+/* eslint-disable react/no-useless-fragment */
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { BaseTemplate } from '@/templates/BaseTemplate';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -17,7 +17,6 @@ export default async function Layout(props: {
 
   return (
     <>
-      <DemoBanner />
       <BaseTemplate
         leftNav={(
           <>
