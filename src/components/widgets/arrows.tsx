@@ -1,7 +1,10 @@
-interface ArrowsProps {
+/* eslint-disable tailwindcss/enforces-negative-arbitrary-values */
+/* eslint-disable tailwindcss/no-custom-classname */
+/* eslint-disable react-dom/no-missing-button-type */
+type ArrowsProps = {
   onClickPrev: () => void;
   onClickNext: () => void;
-}
+};
 
 const Arrows = ({ onClickPrev, onClickNext }: ArrowsProps) => {
   return (
@@ -10,7 +13,7 @@ const Arrows = ({ onClickPrev, onClickNext }: ArrowsProps) => {
         id="al"
         aria-label="Name"
         onClick={onClickPrev}
-        className="animate-show-content flex h-10 w-10 translate-y-[-30px] items-center justify-center rounded-bl-lg rounded-tl-lg bg-[#eee5] fill-white font-mono text-lg transition duration-500 hover:bg-white hover:fill-black"
+        className="animate-show-content flex size-10 translate-y-[-30px] items-center justify-center rounded-l-lg bg-[#eee5] fill-white font-mono text-lg transition duration-500 hover:bg-white hover:fill-black"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +29,7 @@ const Arrows = ({ onClickPrev, onClickNext }: ArrowsProps) => {
         id="al"
         aria-label="Name"
         onClick={onClickNext}
-        className="animate-show-content flex h-10 w-10 -translate-y-[30px] items-center justify-center rounded-br-lg rounded-tr-lg bg-[#eee5] fill-white font-mono text-lg transition duration-500 hover:bg-white hover:fill-black"
+        className="animate-show-content flex size-10 -translate-y-[30px] items-center justify-center rounded-r-lg bg-[#eee5] fill-white font-mono text-lg transition duration-500 hover:bg-white hover:fill-black"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

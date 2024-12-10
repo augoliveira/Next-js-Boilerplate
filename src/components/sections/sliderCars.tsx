@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import Arrows from "../widgets/arrows";
-import SliderItem from "../widgets/slider-item";
-import SliderThumbnailItem from "../widgets/slider-thumbnail-item";
+import Arrows from '../widgets/arrows';
+import SliderItem from '../widgets/slider-item';
+import SliderThumbnailItem from '../widgets/slider-thumbnail-item';
 
 export default function SliderCars() {
   const [itemActive, setItemActive] = useState<number>(1);

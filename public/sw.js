@@ -1,1 +1,207 @@
-if(!self.define){let e,s={};const n=(n,t)=>(n=new URL(n+".js",t).href,s[n]||new Promise((s=>{if("document"in self){const e=document.createElement("script");e.src=n,e.onload=s,document.head.appendChild(e)}else e=n,importScripts(n),s()})).then((()=>{let e=s[n];if(!e)throw new Error(`Module ${n} didn’t register its module`);return e})));self.define=(t,a)=>{const i=e||("document"in self?document.currentScript.src:"")||location.href;if(s[i])return;let c={};const r=e=>n(e,i),o={module:{uri:i},exports:c,require:r};s[i]=Promise.all(t.map((e=>o[e]||r(e)))).then((e=>(a(...e),c)))}}define(["./workbox-4bf1368b"],(function(e){"use strict";importScripts(),self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/_next/static/81p2ANMbDzu1QzW7Wsn0b/_buildManifest.js",revision:"22ec3c1f0770258d011d0ee94795d00e"},{url:"/_next/static/81p2ANMbDzu1QzW7Wsn0b/_middlewareManifest.js",revision:"468e9a0ecca0c65bcb0ee673b762445d"},{url:"/_next/static/81p2ANMbDzu1QzW7Wsn0b/_ssgManifest.js",revision:"5352cb582146311d1540f6075d1f265e"},{url:"/_next/static/chunks/894.3c24362559cab12e.js",revision:"3c24362559cab12e"},{url:"/_next/static/chunks/framework-3581bb99e4b98af8.js",revision:"3581bb99e4b98af8"},{url:"/_next/static/chunks/main-79c9ff5761025bed.js",revision:"79c9ff5761025bed"},{url:"/_next/static/chunks/pages/_app-4fd4f38d31577046.js",revision:"4fd4f38d31577046"},{url:"/_next/static/chunks/pages/_error-07466524dba6669b.js",revision:"07466524dba6669b"},{url:"/_next/static/chunks/pages/index-4425293dce4dead9.js",revision:"4425293dce4dead9"},{url:"/_next/static/chunks/polyfills-5cd94c89d3acac5f.js",revision:"99442aec5788bccac9b2f0ead2afdd6b"},{url:"/_next/static/chunks/webpack-bff6e9f4898c29cf.js",revision:"bff6e9f4898c29cf"},{url:"/assets/bg.jpg",revision:"dd327162dd67a05e5bbef629c04fdfc1"},{url:"/assets/vercel.svg",revision:"4b4f1876502eb6721764637fe5c41702"},{url:"/favicon.ico",revision:"7d3eb966feb5c6060ad7b5843e749f10"},{url:"/fonts/montserrat-v15-latin-300.woff2",revision:"7c3daf12b706645b5d3710f863a4da04"},{url:"/fonts/montserrat-v15-latin-600.woff2",revision:"6fb1b5623e528e27c18658fecf5ee0ee"},{url:"/fonts/montserrat-v15-latin-regular.woff2",revision:"bc3aa95dca08f5fee5291e34959c27bc"},{url:"/img/bg.png",revision:"7d3eb966feb5c6060ad7b5843e749f10"},{url:"/manifest.json",revision:"0ba6a4dae212781b79a7ceda50a5c8b0"}],{ignoreURLParametersMatching:[]}),e.cleanupOutdatedCaches(),e.registerRoute("/",new e.NetworkFirst({cacheName:"start-url",plugins:[{cacheWillUpdate:async({request:e,response:s,event:n,state:t})=>s&&"opaqueredirect"===s.type?new Response(s.body,{status:200,statusText:"OK",headers:s.headers}):s}]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,new e.CacheFirst({cacheName:"google-fonts-webfonts",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:31536e3})]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:googleapis)\.com\/.*/i,new e.StaleWhileRevalidate({cacheName:"google-fonts-stylesheets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,new e.StaleWhileRevalidate({cacheName:"static-font-assets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,new e.StaleWhileRevalidate({cacheName:"static-image-assets",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/image\?url=.+$/i,new e.StaleWhileRevalidate({cacheName:"next-image",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:mp3|wav|ogg)$/i,new e.CacheFirst({cacheName:"static-audio-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:mp4)$/i,new e.CacheFirst({cacheName:"static-video-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:js)$/i,new e.StaleWhileRevalidate({cacheName:"static-js-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:css|less)$/i,new e.StaleWhileRevalidate({cacheName:"static-style-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/data\/.+\/.+\.json$/i,new e.StaleWhileRevalidate({cacheName:"next-data",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:json|xml|csv)$/i,new e.NetworkFirst({cacheName:"static-data-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;const s=e.pathname;return!s.startsWith("/api/auth/")&&!!s.startsWith("/api/")}),new e.NetworkFirst({cacheName:"apis",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:16,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;return!e.pathname.startsWith("/api/")}),new e.NetworkFirst({cacheName:"others",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>!(self.origin===e.origin)),new e.NetworkFirst({cacheName:"cross-origin",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:3600})]}),"GET")}));
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-console */
+/*
+ Copyright 2014 Google Inc. All Rights Reserved.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+// This polyfill provides Cache.add(), Cache.addAll(), and CacheStorage.match(),
+// which are not implemented in Chrome 40.
+importScripts('js/dependencies/cache-polyfill.js');
+
+// While overkill for this specific sample in which there is only one cache,
+// this is one best practice that can be followed in general to keep track of
+// multiple caches used by a given service worker, and keep them all versioned.
+// It maps a shorthand identifier for a cache to a specific, versioned cache name.
+
+// Note that since global state is discarded in between service worker restarts, these
+// variables will be reinitialized each time the service worker handles an event, and you
+// should not attempt to change their values inside an event handler. (Treat them as constants.)
+
+// If at any point you want to force pages that use this service worker to start using a fresh
+// cache, then increment the CACHE_VERSION value. It will kick off the service worker update
+// flow and the old cache(s) will be purged as part of the activate event handler when the
+// updated service worker is activated.
+
+const urlsToPrefetch = [
+  '/',
+  '/page',
+  '/styles/common.css',
+  '/js/dependencies/autolinker.js',
+  '/template.js',
+  '/images/icon.png',
+  '/images/icon.svg',
+];
+
+const version = '1.0.0';
+
+self.addEventListener('install', (event) => {
+  console.log('WORKER: install event in progress.');
+  event.waitUntil(
+    /* The caches built-in is a promise-based API that helps you cache responses,
+      as well as finding and deleting them.
+    */
+    caches
+      /* You can open a cache by name, and this method returns a promise. We use
+        a versioned cache name here so that we can remove old cache entries in
+        one fell swoop later, when phasing out an older service worker.
+      */
+      .open(`${version}fundamentals`)
+      .then((cache) => {
+        /* After the cache is opened, we can fill it with the offline fundamentals.
+          The method below will add all resources we've indicated to the cache,
+          after making HTTP requests for each of them.
+        */
+        return cache.addAll(urlsToPrefetch);
+      })
+      .then(() => {
+        console.log('WORKER: install completed');
+      }),
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  console.log('WORKER: fetch event in progress.');
+
+  /* We should only cache GET requests, and deal with the rest of method in the
+    client-side, by handling failed POST,PUT,PATCH,etc. requests.
+  */
+  if (event.request.method !== 'GET') {
+    /* If we don't block the event as shown below, then the request will go to
+      the network as usual.
+    */
+    console.log('WORKER: fetch event ignored.', event.request.method, event.request.url);
+    return;
+  }
+  /* Similar to event.waitUntil in that it blocks the fetch event on a promise.
+    Fulfillment result will be used as the response, and rejection will end in a
+    HTTP response indicating failure.
+  */
+  event.respondWith(
+    caches
+      /* This method returns a promise that resolves to a cache entry matching
+        the request. Once the promise is settled, we can then provide a response
+        to the fetch request.
+      */
+      .match(event.request)
+      .then((cached) => {
+        /* Even if the response is in our cache, we go to the network as well.
+          This pattern is known for producing "eventually fresh" responses,
+          where we return cached responses immediately, and meanwhile pull
+          a network response and store that in the cache.
+          Read more:
+          https://ponyfoo.com/articles/progressive-networking-serviceworker
+        */
+        const networked = fetch(event.request)
+          // We handle the network request with success and failure scenarios.
+          .then(fetchedFromNetwork, unableToResolve)
+          // We should catch errors on the fetchedFromNetwork handler as well.
+          .catch(unableToResolve);
+
+        /* We return the cached response immediately if there is one, and fall
+          back to waiting on the network as usual.
+        */
+        console.log('WORKER: fetch event', cached ? '(cached)' : '(network)', event.request.url);
+        return cached || networked;
+
+        function fetchedFromNetwork(response) {
+          /* We copy the response before replying to the network request.
+            This is the response that will be stored on the ServiceWorker cache.
+          */
+          const cacheCopy = response.clone();
+
+          console.log('WORKER: fetch response from network.', event.request.url);
+
+          caches
+            // We open a cache to store the response for this request.
+            .open(`${version}pages`)
+            .then((cache) => {
+              /* We store the response for this request. It'll later become
+                available to caches.match(event.request) calls, when looking
+                for cached responses.
+              */
+              cache.put(event.request, cacheCopy);
+            })
+            .then(() => {
+              console.log('WORKER: fetch response stored in cache.', event.request.url);
+            });
+
+          // Return the response so that the promise is settled in fulfillment.
+          return response;
+        }
+
+        /* When this method is called, it means we were unable to produce a response
+          from either the cache or the network. This is our opportunity to produce
+          a meaningful response even when all else fails. It's the last chance, so
+          you probably want to display a "Service Unavailable" view or a generic
+          error response.
+        */
+        function unableToResolve() {
+          /* There's a couple of things we can do here.
+            - Test the Accept header and then return one of the `offlineFundamentals`
+              e.g: `return caches.match('/some/cached/image.png')`
+            - You should also consider the origin. It's easier to decide what
+              "unavailable" means for requests against your origins than for requests
+              against a third party, such as an ad provider
+            - Generate a Response programmaticaly, as shown below, and return that
+          */
+
+          console.log('WORKER: fetch request failed in both cache and network.');
+
+          /* Here we're creating a response programmatically. The first parameter is the
+            response body, and the second one defines the options for the response.
+          */
+          return new Response('<h1>Service Unavailable</h1>', {
+            status: 503,
+            statusText: 'Service Unavailable',
+            headers: new Headers({
+              'Content-Type': 'text/html',
+            }),
+          });
+        }
+      }),
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  /* Just like with the install event, event.waitUntil blocks activate on a promise.
+     Activation will fail unless the promise is fulfilled.
+  */
+  console.log('WORKER: activate event in progress.');
+
+  event.waitUntil(
+    caches
+      /* This method returns a promise which will resolve to an array of available
+        cache keys.
+      */
+      .keys()
+      .then((keys) => {
+        // We return a promise that settles when all outdated caches are deleted.
+        return Promise.all(
+          keys
+            .filter((key) => {
+              // Filter by keys that don't start with the latest version prefix.
+              return !key.startsWith(version);
+            })
+            .map((key) => {
+              /* Return a promise that's fulfilled
+                when each outdated cache is deleted.
+              */
+              return caches.delete(key);
+            }),
+        );
+      })
+      .then(() => {
+        console.log('WORKER: activate completed.');
+      }),
+  );
+});
