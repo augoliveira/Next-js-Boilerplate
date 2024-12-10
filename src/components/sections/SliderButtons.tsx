@@ -1,12 +1,13 @@
-import Link from "next/link";
-import React from "react";
+/* eslint-disable tailwindcss/no-custom-classname */
+import Link from 'next/link';
+import React from 'react';
 
-interface ButtonProps {
+type ButtonProps = {
   id: number;
   text: string;
   link: string;
   type: string;
-}
+};
 
 const SliderButtons: React.FC<{ buttons: ButtonProps[] }> = ({ buttons }) => {
   return buttons.map(({ id, link, text }) => (
