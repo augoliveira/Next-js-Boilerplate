@@ -1,8 +1,8 @@
 import type { SiteConfig } from '../types/index';
 
 export const siteConfig: SiteConfig = {
-  name: 'GLAZING DESINGN | Vidro temperado laminado e espelhos',
-  description: 'Glazing Design vidros esquadrias e espelhos.',
+  name: 'Glazing Design vidros esquadrias e espelhos.',
+  description: 'A Glazing Design, o foco é na seleção e instalação do vidro de forma que atenda a requisitos específicos de conforto, eficiência energética e estética.',
   title: 'vidro para portas, janelas, cobertura, fachada e pele de vidro.',
   subtitle:
     'A Glazing Design é uma empresa especializada na concepção e instalação de projetos inteligentes e modernos. Vidro temperado, laminado, box, espelhos.',
