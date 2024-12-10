@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 import { AppConfig } from '@/utils/AppConfig';
 import { useTranslations } from 'next-intl';
 
@@ -10,9 +11,9 @@ export const BaseTemplate = (props: {
 
   return (
     <div className="w-full px-1 text-gray-700 antialiased">
-      <div className="mx-auto max-w-screen-md">
+      <div className="max-w-screen-full mx-auto">
         <header className="border-b border-gray-300">
-          <div className="pb-8 pt-16">
+          <div className="pb-8 pt-4">
             <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 xl:text-5xl/[3.5rem]">
               {AppConfig.name}
             </h1>

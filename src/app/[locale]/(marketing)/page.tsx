@@ -1,5 +1,5 @@
 /* eslint-disable react/no-useless-fragment */
-import HeroSections from '@/components/HeroSections';
+import SliderCars from '@/components/sections/sliderCars';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IIndexProps = {
@@ -25,11 +25,7 @@ export default async function Index(props: IIndexProps) {
 
   return (
     <>
-      <div className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div className="text-center">
-          <HeroSections />
-        </div>
-      </div>
+      <SliderCars />
     </>
   );
 };
